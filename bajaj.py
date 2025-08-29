@@ -18,6 +18,9 @@ def alternating_caps(s):
             result.append(c.lower())
         upper = not upper
     return ''.join(result)
+@app.route('/', methods=['GET'])
+def home():
+    return "API is running. Use POST /bfhl to access the endpoint."
 
 @app.route('/bfhl', methods=['POST'])
 def process_data():
